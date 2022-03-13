@@ -1,0 +1,15 @@
+Trzeba stworzyc arraya przy pomocy create_array o wielkosci liczby
+plikow, ktore chcemy zliczyc. Nastepnie dodajemy do tego array
+nazwy tych plikow uzywajac add_to_array. Nastepnie mozemy zliczyc
+count przekazujac array z dodanymi nazwami plikow.
+
+Po wykonaniu count otrzymujemy tymczasowy plik,
+gdzie w kazdym wierszu sa zapisane wyniki.
+
+Jesli stworzymy nowa tablice wskaznikow o minimum rozmiarze 1, to
+mozna wykonac funkcje add_result do ktorej przekazujemy ten dany array
+a zwracany jest index bloku w ktorym zapisane sa wyniki z pliku
+tymczasowego, a sam plik tymczasowy jest usuniety.
+
+Jesli rozmiar w tablicy wskaznikow się skonczy to nie mozna wykonac
+funkcji add_result.
