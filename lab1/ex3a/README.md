@@ -8,6 +8,11 @@ Zadanie 3. Testy i pomiary (50%)
 
 Wyniki pomiarów zbierz w pliku results3a.txt. Otrzymane wyniki krótko skomentuj.
 
+
+#### Jak użyć:
+* make tests - uruchamia testy
+* make clean - czyści dodatkowo utworzone pliki
+
 # [ENGLISH]
 
 Task 3. Tests and measurements (50%)
@@ -18,3 +23,7 @@ Task 3. Tests and measurements (50%)
 * With the use of dynamically loaded libraries (dynamic, loaded by the program).
 
 Collect the measurement results in the results3a.txt file. Briefly comment on the obtained results.
+
+#### How to use:
+* make tests - run tests
+* make clean - clean the new created files
