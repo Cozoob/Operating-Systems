@@ -22,6 +22,10 @@ W programie zmierz, wypisz na konsolę i zapisz do pliku z raportem czasy realiz
 
 Mierząc czasy poszczególnych operacji, zapisz trzy wartości: czas rzeczywisty, czas użytkownika i czas systemowy. Rezultaty umieść pliku raport2.txt i dołącz do archiwum zadania.
 
+#### Jak użyć:
+* make tests - uruchamia testy
+* make clean - czyści dodatkowo utworzone pliki
+
 
 # [ENGLISH]
 Task 2. Program using the library (25%)
@@ -46,3 +50,8 @@ In the program, measure, write to the console and save to a file with a report t
 * Multiple additions and deletions of a given number of blocks alternately
 
 As you measure times for individual operations, write down three values: real time, user time, and system time. Place the results in the report2.txt file and attach it to the task archive.
+
+
+#### How to use:
+* make tests - run tests
+* make clean - clean the new created files
