@@ -19,7 +19,7 @@ Na koniec ma wypisać na standardowe wyjście informacje o liczbach plików posz
 
 #### Jak użyć:
 * make - kompiluje pliki, aby uruchomić program.
-* ...
+* main dir - uruchamia program dla folderu "dir"
 
 # [ENGLISH]
 Exercise 3 (50%)
@@ -42,4 +42,4 @@ The path given as a call argument can be relative or absolute. The program shoul
 
 #### How to use:
 * make - compiles files to run the program.
-* ...
+* main dir - runs the program for the directory "dir"
