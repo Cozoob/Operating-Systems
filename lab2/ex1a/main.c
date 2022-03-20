@@ -3,10 +3,24 @@
 #include <stdlib.h>
 #include <ctype.h>
 #include <string.h>
+#include <sys/times.h>
+#include <unistd.h>
+
+struct tms tmsStart, tmsEnd;
+clock_t clockStart, clockEnd;
 
 void scanf_error();
 
+void save_times(FILE* file);
+
+double time_in_seconds(clock_t start, clock_t end) {
+    return (double)(end - start) / (double)sysconf(_SC_CLK_TCK);
+}
+
 int main(int argc, char* argv[]) {
+
+    clockStart = times(&tmsStart);
+
 
     if(argc == 2){
         printf("%d\n", argc);
@@ -75,10 +89,24 @@ int main(int argc, char* argv[]) {
         free(filename1);
         free(filename2);
     }
+
+    clockEnd = times(&tmsEnd);
+    FILE* file_results = fopen("pomiar_zad_1a", "w+");
+
+    save_times(file_results);
+
+    fclose(file_results);
     return 0;
 }
 
 void scanf_error(){
     perror("Scanf error!");
     exit(-1);
+}
+
+void save_times(FILE* file){
+    fprintf(file, "Time results\n--------------------\n");
+    fprintf(file, "real time: %f\n", time_in_seconds(clockStart,clockEnd));
+    fprintf(file, "sys time: %f\n", time_in_seconds(tmsStart.tms_stime,tmsEnd.tms_stime));
+    fprintf(file, "user time: %f\n\n", time_in_seconds(tmsStart.tms_utime,tmsEnd.tms_utime));
 }
