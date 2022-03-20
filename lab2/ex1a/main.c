@@ -66,6 +66,7 @@ int main(int argc, char* argv[]) {
     char* character = calloc(2, sizeof (char));
 
     unsigned int num;
+    // firstly, find the first line!
     while(!feof(file1)) { // better than using while true...
         num = fread(character, 1, 1, file1);
 
@@ -78,10 +79,39 @@ int main(int argc, char* argv[]) {
             exit(-1);
         }
 
-        if(!isspace(character[0])) {
+        if(character[0] == '\n') {
+            continue;
+        } else{
+            fwrite(character, 1, 1, file2);
+            break;
+        }
+    }
+
+    unsigned int counter = 0;
+    while(!feof(file1)) { // better than using while true...
+        num = fread(character, 1, 1, file1);
+
+        if(feof(file1)){ // It is already the end of the file!
+            break;
+        }
+
+        if(!num){ // fread failed
+            perror("Fread error!");
+            exit(-1);
+        }
+
+        if(character[0] == '\n') {
+            counter++;
+            if(counter == 1){
+                fwrite(character, 1, 1, file2);
+            }
+        } else {
+            counter = 0;
             fwrite(character, 1, 1, file2);
         }
     }
+
+
 
     fclose(file1);
     fclose(file2);
