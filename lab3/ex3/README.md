@@ -11,7 +11,8 @@ powinien przyjmować maksymalną głębokość przeszukiwania licząc od katalog
 
 #### Jak użyć:
 * make - tworzy pliki do uruchomienia programu
-* ./main - uruchamia program
+* ./main PATH STRING DEPTH - uruchamia program gdzie dla danej ścieżki PATH szuka łańcuch znaków STRING w pliku na głębokość DEPTH
+np.: ./main ~/CLionProjects/lab3SysOpy/Aaa Ada 3
 * make clean - czyści dodatkowo utworzone pliki
 
 # [ENGLISH]
@@ -26,5 +27,6 @@ As the third parameter, the program should assume the maximum depth of the searc
 
 #### How to use:
 * make - creates files to run the program
-* ./main - runs the program
+* ./main PATH STRING DEPTH - runs the program where for given path PATH it looks for the string STRING in files of maximum depth DEPTH
+e.g.: ./main ~/CLionProjects/lab3SysOpy/Aaa Ada 3
 * make clean - cleans additionally created files
