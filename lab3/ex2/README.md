@@ -11,7 +11,8 @@ trwały co najmniej kilka sekund.
 
 #### Jak użyć:
 * make - tworzy pliki do uruchomienia programu
-* ./main - uruchamia program
+* ./main STEP N- uruchamia program dla N procesów-dzieci o kroku STEP
+np.: ./main 0.0001 1000
 * make clean - czyści dodatkowo utworzone pliki
 
 
@@ -28,5 +29,6 @@ The accuracy of the calculations should be selected in such a way that the calcu
 
 #### How to use:
 * make - creates files to run the program
-* ./main - runs the program 
+* ./main STEP N - runs the program for N child processes and for step STEP
+e.g.: ./main 0.0001 1000
 * make clean - cleans additionally created files
