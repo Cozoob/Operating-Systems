@@ -17,11 +17,11 @@ UWAGA! W żaden sposób nie opóźniamy wysyłania sygnałów, wszelkie "gubieni
 
 a) Wysyłanie sygnałów w obu programach należy wykonać w następujących trybach: (30%)
 
-    KILL - za pomocą funkcji kill
-    SIGQUEUE - za pomocą funkcji sigqueue - wraz z przesłanym sygnałem catcher wysyła numer kolejnego odsyłanego sygnału, dzięki czemu sender wie, 
-    ile dokładnie catcher odebrał, a tym samym wysłał do niego sygnałów. Wypisz tę dodatkową informację w senderze.
-    SIGRT - zastępując SIGUSR1 i SIGUSR2 dwoma dowolnymi sygnałami czasu rzeczywistego wysyłanymi za pomocą kill. Jaka liczba sygnałów będzie 
-    teraz odebrana?
+* KILL - za pomocą funkcji kill
+* SIGQUEUE - za pomocą funkcji sigqueue - wraz z przesłanym sygnałem catcher wysyła numer kolejnego odsyłanego sygnału, dzięki czemu sender wie, 
+ile dokładnie catcher odebrał, a tym samym wysłał do niego sygnałów. Wypisz tę dodatkową informację w senderze.
+* SIGRT - zastępując SIGUSR1 i SIGUSR2 dwoma dowolnymi sygnałami czasu rzeczywistego wysyłanymi za pomocą kill. Jaka liczba sygnałów będzie 
+teraz odebrana?
 
 
 #### Jak użyć:
@@ -49,11 +49,11 @@ ATTENTION! We do not delay the sending of signals in any way, any "loss" of sign
 
 a) Sending signals in both programs should be performed in the following modes: (30%)
 
-    KILL - with the kill function
-    SIGQUEUE - using the sigqueue function - along with the sent signal, the catcher sends the number of the next sent signal, thanks to which the sender knows,
-    exactly how many catcher picked up and thus sent signals to him. Write this additional information in the sender.
-    SIGRT - replacing SIGUSR1 and SIGUSR2 with any two real-time signals sent with kill. How many signals will there be
-    now picked up?
+* KILL - with the kill function
+* SIGQUEUE - using the sigqueue function - along with the sent signal, the catcher sends the number of the next sent signal, thanks to which the sender knows,
+exactly how many catcher picked up and thus sent signals to him. Write this additional information in the sender.
+* SIGRT - replacing SIGUSR1 and SIGUSR2 with any two real-time signals sent with kill. How many signals will there be
+now picked up?
 
 Test the operation of the three selected flags in the sigation function. One of them should be the SA_SIGINFO flag.
 For this flag, install the signal handler (handler) for appropriately selected signals using the procedure syntax
@@ -64,4 +64,4 @@ also the signal number and the PID of the sending process provided in the siginf
 * make - creates files to run the program
 * ./main - runs the program
 * make clean - cleans additionally created files
-* * make test - runs the examplary command
+* make test - runs the examplary command
