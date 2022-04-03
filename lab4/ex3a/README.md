@@ -55,11 +55,6 @@ exactly how many catcher picked up and thus sent signals to him. Write this addi
 * SIGRT - replacing SIGUSR1 and SIGUSR2 with any two real-time signals sent with kill. How many signals will there be
 now picked up?
 
-Test the operation of the three selected flags in the sigation function. One of them should be the SA_SIGINFO flag.
-For this flag, install the signal handler (handler) for appropriately selected signals using the procedure syntax
-handler with three arguments. List and comment (preparing appropriate scenarios) three different pieces of information, plus
-also the signal number and the PID of the sending process provided in the siginfo_t structure passed as the second argument of the handler function.
-
 #### How to use:
 * make - creates files to run the program
 * ./main - runs the program
