@@ -1,0 +1,11 @@
+
+#ifndef LAB4ZAD3_TYPESIG_H
+#define LAB4ZAD3_TYPESIG_H
+
+enum TYPESIG{
+    KILL,
+    SIGQUEUE,
+    SIGRT
+};
+
+#endif //LAB4ZAD3_TYPESIG_H
