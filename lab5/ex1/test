@@ -1,0 +1,6 @@
+skladnik1 = cat /etc/passwd
+skladnik2 = grep systemd*
+skladnik3 = cut -b 1-10
+skladnik4 = wc -l
+skladnik5 = grep 1
+skladnik6 = grep ^s
